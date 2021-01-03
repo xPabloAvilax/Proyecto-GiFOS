@@ -1,0 +1,55 @@
+.darkMode{
+    background-color:#37383C;
+    transition: background-color .2s;
+    
+
+    .top-page{
+        background-color: #000000;
+    }
+    .navmenu__list{
+        background-color: #000000;
+    }
+
+    label i{
+        color: #ffffff;
+    }
+    .img-logo{
+        display: none; 
+    }
+    .imglogo-dark{
+        display: block;
+    }
+    .info-content{
+        h1{
+            color: #ffffff;
+        }
+    }
+    #search-input{
+        background-color: #37383C;
+        border: 1px solid #ffffff;
+    }
+    .btn-search{
+        color:#ffffff;
+    }
+    .title-trending{
+        color: #ffffff;
+    }
+    #categories-trending p{
+        color: #ffffff;
+    }
+    .trending-gifos{
+        background-color:#222326;
+        h2,p{
+            color: #ffffff;
+        }
+    }
+    
+    footer,h2,p{
+        color: #ffffff;
+    }
+    .icons-footer{
+        color: #ffffff;
+    }
+
+    
+}

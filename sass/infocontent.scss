@@ -1,0 +1,116 @@
+.info-content h1{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 25px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+    height: 99px;
+    width: 286px;
+    margin-left: 45px;
+    margin-top: -2px;
+    padding-top: 30px;
+}
+.gifos{
+    color: #50E3C2;
+}
+.info-content img{
+    margin-left: 45px;
+    height: 230px;
+    width: 273px;
+    margin-top: -31px;
+}
+
+.container-input input {
+    border: 1px solid #572EE5;
+    height: 50px;
+    outline: none;
+    width: 334px;
+    margin-left: 10px;
+    padding-left: 20px;
+    border-radius: 27px;  
+    position: absolute;
+    top: 383px;
+    font-size: 16px;
+}
+.container-btn{
+    line-height: 55px;
+    position: absolute;
+    right: 40px;
+    top: 385px;
+    text-align: center;
+
+}
+#search-bar input::placeholder{
+    padding: 10px 0 10px 50px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 16px;
+    color: #6B7989;
+
+}
+.btn-search{
+    background: none;
+    border: none;
+    color:#572EE5;
+    font-size: 20px;
+    font-weight: 100;
+}
+.btn-search:focus{
+    outline: none;
+    border: none;
+}
+
+.title-trending{
+    text-align: center;
+    color: #572EE5;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 31px;
+}
+#categories-trending{
+    display: flex;
+    height: 50px;
+    margin-left: 20px;
+    
+    p{ 
+        color:#572EE5;
+        font-size: 16px;
+        font-family: 'Montserrat-Medium', sans-serif;
+        line-height: 25px;
+        text-transform: capitalize;
+        }
+}
+.trending-gifos{
+    margin-top: 45px;
+    background-color: #F3F5F8;
+    height: 430px;
+
+    h2{
+        padding-top: 46px; 
+        font-size: 20px;
+        color: #572EE5;
+        text-align: center;
+    }
+    p{
+        width: 333px;
+        height: 46px;
+        margin-left: 21px;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #000000;
+        text-align: center;
+        line-height: 23px;
+        font-size: 16px;
+    }
+}
+#trending-top{
+    display: flex;
+    overflow: scroll;
+}
+.img-trending{
+    width: 243px;
+    height: 187px;
+    padding: 10px;
+    
+   
+}

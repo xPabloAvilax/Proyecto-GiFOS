@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header{
+  height: 95px;
+}
+.top-page{
+  background: #572EE5;
+  height: 5px;
+}
+.navmenu {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.navmenu__logo {
+  position: relative;
+  z-index: 2;
+}
+.navmenu__icons {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #572EE5;
+}
+.imglogo-dark{
+  display: none;
+}
+
+.navmenu__icons:active {
+  transform: scale(1.1);
+}
+.navmenu__list {
+  height: 500px;
+  float: right;
+  margin: 0;
+  position: absolute;
+  top: 68px;
+  list-style: none;
+  width: 100vw;
+  left: 0;
+  background: rgba(87, 46, 229, 0.9);
+  box-sizing: border-box;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+}
+.navmenu__list li {
+ 
+  padding: 10px 0;
+  margin-right: 50px;
+  text-align: center;
+}
+.navmenu__list li:first-child{
+  margin-top: 15px;
+}
+.navmenu__list a::after{
+  content : "";
+  display: block;
+  height  : 1px;
+  width   : 40px;  
+  background-color: #ffffff;
+  margin: 10px auto;
+  margin-top: 20px;
+}
+
+
+.navmenu__list a {
+  text-decoration: none;
+  color: #ffffff;
+}
+i.navmenu__iconsOpen {
+  display: none;
+}
+#redirect:checked + .navmenu__icons label .navmenu__iconsOpen {
+  display: inline;
+}
+#redirect:checked + .navmenu__icons label .navmenu__iconsClose {
+  display: none;
+}
+#redirect:checked + .navmenu__icons + .navmenu__list {
+  display: none;
+}
+#redirect {
+  display: none;
+}
+

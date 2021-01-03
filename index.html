@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+    <header id="header">
+        <div class="top-page"></div>
+        <nav class="navmenu">
+            <div class="navmenu__logo">
+                <img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/>
+                <img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro">
+            </div>
+            <input type="checkbox" id="redirect">
+            <button class="navmenu__icons">
+            <label for="redirect">
+                    <i class="fas fa-bars navmenu__iconsOpen"></i>
+                    <i class="fas fa-times navmenu__iconsClose"></i>
+            </label> 
+            </button>
+
+            <ul class="navmenu__list">
+                    <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
+                    <li> <a href="#favoritos">Favoritos</a> </li>
+                    <li> <a href="#misGifos">Mis GIFOS</a> </li>
+            </ul>
+        </nav>   
+    </header>
+    <main 
+        <section id="main">
+            <div class="info-content">
+                <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
+                <img src="assets/ilustra_header.svg" alt="">
+                    <form>
+                        <div id="search-bar">
+                            <div class="container-input">
+                                <input id="search-input" type="text" placeholder="Busca GIFOS y más">
+                                <div class="container-btn">
+                                    <button class="btn-search">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>  
+                        </div>
+                    </form>
+                <div>
+                    <h2 class="title-trending">Trending:</h2>
+                    <div id="categories-trending"></div>
+                </div>
+                
+            </div>
+        </section>
+        <section id="top-trending">
+            <div class="trending-gifos">
+                <h2>
+                    Trending GIFOS
+                </h2>
+                <p>
+                    Mira los últimos GIFOS de nuestra comunidad.
+                </p>
+                <div id="trending-top"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <h2>Compartir en:</h2>
+        <div class="icons-footer">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>
+            © GIFOS 2020 All Rights Reserved.
+        </p>
+    </footer>
+</body>
+<script src="trending.js"></script>
+<script src="app.js"></script>
+</html>
+
+
