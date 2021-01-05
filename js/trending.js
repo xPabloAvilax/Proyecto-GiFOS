@@ -1,5 +1,5 @@
 const api_key = "Nt8kz56S3R0wbsbVh9seCUoA3lVvqRem";
-const trendingPath = `https://api.giphy.com/v1/gifs/categories?api_key=${api_key}`;
+const trendingPath = `https://api.giphy.com/v1/trending/searches?api_key=${api_key}`;
 const topTrending= `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}`;
 
 fetch(trendingPath).then(function(res){
@@ -10,8 +10,8 @@ fetch(trendingPath).then(function(res){
     let trendingHtml = '';
 
     json.data.slice(0,5).forEach(function(obj){
-        const trendingTerms = obj.name;
-        trendingHtml+=`<p>${trendingTerms}</p>`
+        const trendingTerms = obj;
+        trendingHtml+=`<p class="categories">${trendingTerms}</p>`
   
     })
     

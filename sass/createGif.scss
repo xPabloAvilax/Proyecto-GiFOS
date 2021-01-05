@@ -1,0 +1,63 @@
+.camera{
+    float: left;
+    .img-camera{
+        margin-left: 160px;
+        margin-top: 150px;
+    }
+    .ligth-img{
+        margin-left: -3px;
+        margin-bottom: 13px;
+    }
+}
+
+.total-container{
+    width: 688px;
+    height: 390px;
+    border: 1px solid #572EE5;
+    float: right;
+    margin-right: 376px;
+    margin-top: 40px;
+    h2{
+        text-align: center;
+       
+        color:#572EE5;
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 25px;
+        line-height: 35px;
+
+        .downText::after{
+            content: "\a";
+           white-space: pre;  
+        }
+        .color-gifos{
+            color:#50E3C2;
+        }
+    }
+    .text-info{
+        font-family: 'Roboto-Regular', sans-serif;
+        font-size: 16px;
+        color: #000000;
+        text-align: center;
+        line-height: 29px;
+
+        .downText::after{
+            content: "\a";
+           white-space: pre;  
+        }
+
+        
+    }
+
+}
+.paso-paso  img{
+    margin-left: 700px;
+    margin-top: 20px;
+    
+}
+.line-color{
+    margin: 10px;
+    background-color:#572EE5;
+    width: 750px;
+    height: 5px;
+    margin-left: 350px;
+}

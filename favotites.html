@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFOS</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="top-page"></div>
         <nav class="navmenu">
             <div class="navmenu__logo">
-               <a href="index.html"><img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
+                <a href="index.html"><img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
                 <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
             </div>
             <input type="checkbox" id="redirect">
@@ -30,42 +30,18 @@
 
             <ul class="navmenu__list">
                     <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
-                    <li> <a href="./favotites.html">Favoritos</a> </li>
-                    <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
-                    <div class="container-createGif">
-                        <a href="createGif.html"><div id="gif-create"></div></a>
-                        <a href="createGif.html"><div></div></a>
-                    </div>
+                    <li> <a href="./prueba.html">Favoritos</a> </li>
+                    <li> <a href="#misGifos">Mis GIFOS</a> </li>
             </ul>
         </nav>   
     </header>
     <main>
         <section id="main">
             <div class="info-content">
-                <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
-                <img class="img-header" src="assets/ilustra_header.svg" alt="">
-                    <form id="search-form">
-                        <div id="search-bar">
-                            <div class="container-input">
-                                <input id="search-input" type="text" placeholder="Busca GIFOS y más">
-                                <div class="container-btn">
-                                    <button class="btn-search">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>  
-                        </div>
-                    </form>
-                <div>
-                    <h2 class="title-trending">Trending:</h2>
-                    <div id="categories-trending"></div>
-                </div>
-                <div class="containerGifs">
-                    <div id="searchGifs"></div>
-                    <div></div>
-                </div>
-                
+                <img class="img-favorites" src="./assets/icon-favoritos.svg" alt="">
+                <h2 class="title-favorites">Favoritos</h1>
             </div>
+               
         </section>
         <section id="top-trending">
             <div class="trending-gifos">
@@ -96,5 +72,3 @@
 <script src="./js/app.js"></script>
 <script src="./js/searchTrending.js"></script>
 </html>
-
-

@@ -66,6 +66,9 @@ header {
   margin: 10px auto;
   margin-top: 20px; }
 
+.container-createGif {
+  display: none; }
+
 .navmenu__list a {
   text-decoration: none;
   color: #ffffff; }
@@ -84,5 +87,47 @@ i.navmenu__iconsOpen {
 
 #redirect {
   display: none; }
+
+@media only screen and (min-width: 426px) {
+  .navmenu__icons {
+    display: none; }
+
+  .navmenu__list {
+    display: flex;
+    height: 34px;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+    top: -1px;
+    padding-top: -40px;
+    padding-right: 50px; }
+
+  .navmenu__list li {
+    padding-top: 50px; }
+
+  .navmenu__list a {
+    text-transform: uppercase;
+    color: #572EE5;
+    font-weight: bold; }
+
+  .navmenu__list li:first-child {
+    margin-top: 0px; }
+
+  .navmenu__list a::after {
+    display: none; } }
+@media only screen and (min-width: 769px) {
+  #gif-create {
+    background-image: url("../assets/button-crear-gifo.svg");
+    background-repeat: no-repeat;
+    height: 54px;
+    width: 54px;
+    cursor: pointer;
+    margin-top: 30px; }
+
+  .container-createGif {
+    display: block; }
+
+  #gif-create:hover {
+    background-image: url("../assets/CTA-crear-gifo-hover.svg"); } }
 
 /*# sourceMappingURL=header.css.map */

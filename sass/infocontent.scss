@@ -14,11 +14,25 @@
 .gifos{
     color: #50E3C2;
 }
-.info-content img{
+.img-header{
     margin-left: 45px;
     height: 230px;
     width: 273px;
     margin-top: -31px;
+}
+.img-favorites{
+    padding-top: 30px;
+    margin-left: 174px;
+    width: 28px;
+    height: 21px;
+    
+}
+.title-favorites{
+    font-family: 'Montserrat-Bold', sans-serif;
+    color:#572EE5;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -30px;
 }
 
 .container-input input {
@@ -70,7 +84,7 @@
 }
 #categories-trending{
     display: flex;
-    height: 50px;
+    height: 80px;
     margin-left: 20px;
     
     p{ 
@@ -82,9 +96,10 @@
         }
 }
 .trending-gifos{
-    margin-top: 45px;
+    
     background-color: #F3F5F8;
-    height: 430px;
+    height: 450px;
+    
 
     h2{
         padding-top: 46px; 
@@ -103,6 +118,20 @@
         font-size: 16px;
     }
 }
+.containerGifs{
+    width: calc(156px * 2 +2px);
+    margin: auto;
+}
+.show_gifs{
+    
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#searchGifs img{
+    width: 156px;
+    height: 120px;
+}
 #trending-top{
     display: flex;
     overflow: scroll;
@@ -112,5 +141,74 @@
     height: 187px;
     padding: 10px;
     
-   
+
 }
+
+
+@media only screen and (min-width: 376px) {
+    .info-content h1{
+        margin-left: 70px;
+    }
+    .info-content img{
+        margin-left: 80px;
+    }
+    .container-input input{
+        margin-left: 35px;
+    }
+    .trending-gifos p{
+       margin-left: 40px;
+    }
+
+
+}
+@media only screen and (min-width: 426px) {
+    .info-content h1{
+        margin-left: 140px;
+        width: 500px;
+        font-size: 30px;
+    }
+    .info-content img{
+        margin-left: 250px;
+    }
+    .container-input input{
+        margin-left: 200px;
+    }
+    .container-btn{
+        right: 230px;
+    }
+    #categories-trending{
+        margin-left: 100px;
+    }
+    #categories-trending p{
+        margin-left: 30px;
+    }
+    
+}
+@media only screen and (min-width: 769px) {
+    .info-content h1{
+        margin-left: 260px;
+        width: 500px;
+        font-size: 30px;
+    }
+    .info-content img{
+        margin-left: 370px;
+        margin-top:-45px;
+    }
+    .container-input input{
+        margin-left: 320px;
+    }
+    .container-btn{
+        right: 360px;
+    }
+    #categories-trending{
+        margin-left: 250px;
+    }
+   
+
+}
+
+
+
+
+
+

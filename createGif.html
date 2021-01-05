@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFOS</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="top-page"></div>
         <nav class="navmenu">
             <div class="navmenu__logo">
-               <a href="index.html"><img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
+                <a href="index.html"><img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
                 <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
             </div>
             <input type="checkbox" id="redirect">
@@ -30,8 +30,8 @@
 
             <ul class="navmenu__list">
                     <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
-                    <li> <a href="./favotites.html">Favoritos</a> </li>
-                    <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
+                    <li> <a href="./prueba.html">Favoritos</a> </li>
+                    <li> <a href="#misGifos">Mis GIFOS</a> </li>
                     <div class="container-createGif">
                         <a href="createGif.html"><div id="gif-create"></div></a>
                         <a href="createGif.html"><div></div></a>
@@ -40,46 +40,30 @@
         </nav>   
     </header>
     <main>
-        <section id="main">
-            <div class="info-content">
-                <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
-                <img class="img-header" src="assets/ilustra_header.svg" alt="">
-                    <form id="search-form">
-                        <div id="search-bar">
-                            <div class="container-input">
-                                <input id="search-input" type="text" placeholder="Busca GIFOS y más">
-                                <div class="container-btn">
-                                    <button class="btn-search">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>  
-                        </div>
-                    </form>
-                <div>
-                    <h2 class="title-trending">Trending:</h2>
-                    <div id="categories-trending"></div>
-                </div>
-                <div class="containerGifs">
-                    <div id="searchGifs"></div>
-                    <div></div>
-                </div>
-                
+        <div class="container-camera">
+            <div class="camera">
+                <img class="img-camera" src="./assets/camara.svg" alt="">
+                <img  class="ligth-img" src="./assets/element-luz-camara.svg" alt="">
             </div>
-        </section>
-        <section id="top-trending">
-            <div class="trending-gifos">
+        </div>
+        <div class="total-container">
+            <div class="green-details">
                 <h2>
-                    Trending GIFOS
+                    Aquí <span class="downText">podrás</span> crear tus propios <span class="color-gifos">GIFOS</span>
                 </h2>
-                <p>
-                    Mira los últimos GIFOS de nuestra comunidad.
+                <p class="text-info">
+                    ¡Crea tu GIFO en sólo 3 pasos!<span class="downText">(sólo necesitas una cámara para grabar un video)</span> 
                 </p>
-                <div id="trending-top"></div>
             </div>
-        </section>
-    </main>
+        </div>
+        <div>
+            <div class="paso-paso">
+                <img src="assets/paso-a-paso.svg" alt="">
+            </div>
+        </div>
+        <div class="line-color"></div>
 
+    </main>
     <footer id="footer">
         <h2>Compartir en:</h2>
         <div class="icons-footer">
@@ -91,10 +75,10 @@
             © GIFOS 2020 All Rights Reserved.
         </p>
     </footer>
+  
+    
 </body>
 <script src="./js/trending.js"></script>
 <script src="./js/app.js"></script>
 <script src="./js/searchTrending.js"></script>
 </html>
-
-
