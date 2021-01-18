@@ -95,6 +95,15 @@
         text-transform: capitalize;
         }
 }
+#title-categories{
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 25px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+
+}
 .trending-gifos{
     
     background-color: #F3F5F8;
@@ -107,26 +116,24 @@
         color: #572EE5;
         text-align: center;
     }
-    p{
-        width: 333px;
-        height: 46px;
-        margin-left: 21px;
-        font-family: 'Roboto-Regular', sans-serif;
-        color: #000000;
-        text-align: center;
-        line-height: 23px;
-        font-size: 16px;
-    }
+  
 }
+.text-trending{
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #000000;  
+    line-height: 23px;
+    font-size: 16px;
+}
+
 .containerGifs{
     width: calc(156px * 2 +2px);
     margin: auto;
 }
 .show_gifs{
-    
     margin-bottom: 10px;
     padding-left: 20px;
 }
+
 
 #searchGifs img{
     width: 156px;
@@ -149,7 +156,7 @@
     .info-content h1{
         margin-left: 70px;
     }
-    .info-content img{
+    .img-header{
         margin-left: 80px;
     }
     .container-input input{
@@ -158,8 +165,15 @@
     .trending-gifos p{
        margin-left: 40px;
     }
-
-
+    .containerGifs{
+        display: flex;
+    }
+    #searchGifs{
+        display: inline-block;
+    }
+    .show_gifs{
+        margin-left: 15px;
+    }
 }
 @media only screen and (min-width: 426px) {
     .info-content h1{
@@ -167,7 +181,7 @@
         width: 500px;
         font-size: 30px;
     }
-    .info-content img{
+    .img-header{
         margin-left: 250px;
     }
     .container-input input{
@@ -183,6 +197,7 @@
         margin-left: 30px;
     }
     
+    
 }
 @media only screen and (min-width: 769px) {
     .info-content h1{
@@ -190,7 +205,7 @@
         width: 500px;
         font-size: 30px;
     }
-    .info-content img{
+    .img-header{
         margin-left: 370px;
         margin-top:-45px;
     }
@@ -204,6 +219,27 @@
         margin-left: 250px;
     }
    
+
+}
+@media only screen and (min-width: 1025px) {
+    .info-content h1{
+        margin-left: 480px;
+        width: 500px;
+        font-size: 30px;
+    }
+    .img-header{
+        margin-left: 575px;
+       
+    }
+    .container-input input{
+        margin-left: 520px;
+    }
+    .container-btn{
+        right: 590px;
+    }
+    #categories-trending{
+        margin-left: 430px;
+    }
 
 }
 

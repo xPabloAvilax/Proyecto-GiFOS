@@ -1,13 +1,19 @@
 
-const searchForm = document.getElementById('search-form');
-const searchInput = document.getElementById('search-input');
+let searchForm = document.getElementById('search-form');
+let searchInput = document.getElementById('search-input');
 
 searchForm.addEventListener('submit', function(e) { 
     e.preventDefault() 
     const q = searchInput.value; 
-
-    search(q)
+    let titleCategories = document.getElementById('title-categories');
+    
+    titleCategories.innerHTML = MaysPrimera(q.toLowerCase());
+    search(q);
 })
+
+function MaysPrimera(string){
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
 
 function search(q) { 
@@ -23,8 +29,6 @@ function search(q) {
     
     
         json.data.forEach(function(obj) {
-            console.log(obj) 
-    
             const url = obj.images.fixed_width.url
             const title = obj.images.title
             trendingHTML += `<img 

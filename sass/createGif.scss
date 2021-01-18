@@ -39,13 +39,6 @@
         color: #000000;
         text-align: center;
         line-height: 29px;
-
-        .downText::after{
-            content: "\a";
-           white-space: pre;  
-        }
-
-        
     }
 
 }
@@ -54,6 +47,7 @@
     margin-top: 20px;
     
 }
+
 .line-color{
     margin: 10px;
     background-color:#572EE5;

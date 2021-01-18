@@ -15,35 +15,31 @@
 <body>
     <header id="header">
         <div class="top-page"></div>
-        <nav class="navmenu">
-            <div class="navmenu__logo">
-               <a href="index.html"><img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
-                <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
-            </div>
-            <input type="checkbox" id="redirect">
-            <button class="navmenu__icons">
-            <label for="redirect">
-                    <i class="fas fa-bars navmenu__iconsOpen"></i>
-                    <i class="fas fa-times navmenu__iconsClose"></i>
-            </label> 
-            </button>
-
-            <ul class="navmenu__list">
-                    <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
-                    <li> <a href="./favotites.html">Favoritos</a> </li>
-                    <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
-                    <div class="container-createGif">
-                        <a href="createGif.html"><div id="gif-create"></div></a>
-                        <a href="createGif.html"><div></div></a>
-                    </div>
+        <div class="navmenu__logo">
+            <a href="index.html"><img class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
+             <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
+         </div>
+        <nav id="navmenu__list" class="navmenu__list"> 
+                <ul>
+                     <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
+                     <li> <a href="./favotites.html">Favoritos</a> </li>
+                     <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
+                 <div class="container-createGif">
+                    <a href="createGif.html"><div id="gif-create"></div></a>
+                    <a href="createGif.html"><div></div></a>
+                 </div>
             </ul>
-        </nav>   
+        </nav>  
+        <div id="menu-toggle" class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+             
     </header>
     <main>
         <section id="main">
             <div class="info-content">
                 <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
-                <img class="img-header" src="assets/ilustra_header.svg" alt="">
+                <img   class="img-header" src="assets/ilustra_header.svg" alt="">
                     <form id="search-form">
                         <div id="search-bar">
                             <div class="container-input">
@@ -59,10 +55,12 @@
                 <div>
                     <h2 class="title-trending">Trending:</h2>
                     <div id="categories-trending"></div>
+                    <h2 id="title-categories"></h2>
+                    
                 </div>
                 <div class="containerGifs">
-                    <div id="searchGifs"></div>
-                    <div></div>
+                    
+                    <div id="searchGifs"></div> 
                 </div>
                 
             </div>
@@ -72,7 +70,7 @@
                 <h2>
                     Trending GIFOS
                 </h2>
-                <p>
+                <p class="text-trending">
                     Mira los últimos GIFOS de nuestra comunidad.
                 </p>
                 <div id="trending-top"></div>

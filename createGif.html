@@ -14,31 +14,28 @@
 
 <body>
     <header id="header">
-        <div class="top-page"></div>
-        <nav class="navmenu">
+        <header id="header">
+            <div class="top-page"></div>
             <div class="navmenu__logo">
-                <a href="index.html"><img  class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
-                <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
-            </div>
-            <input type="checkbox" id="redirect">
-            <button class="navmenu__icons">
-            <label for="redirect">
-                    <i class="fas fa-bars navmenu__iconsOpen"></i>
-                    <i class="fas fa-times navmenu__iconsClose"></i>
-            </label> 
-            </button>
-
-            <ul class="navmenu__list">
-                    <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
-                    <li> <a href="./prueba.html">Favoritos</a> </li>
-                    <li> <a href="#misGifos">Mis GIFOS</a> </li>
-                    <div class="container-createGif">
+                <a href="index.html"><img class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
+                 <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
+             </div>
+            <nav id="navmenu__list" class="navmenu__list"> 
+                    <ul>
+                         <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
+                         <li> <a href="./favotites.html">Favoritos</a> </li>
+                         <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
+                     <div class="container-createGif">
                         <a href="createGif.html"><div id="gif-create"></div></a>
                         <a href="createGif.html"><div></div></a>
-                    </div>
-            </ul>
-        </nav>   
-    </header>
+                     </div>
+                </ul>
+            </nav>  
+            <div id="menu-toggle" class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+                 
+        </header>
     <main>
         <div class="container-camera">
             <div class="camera">
@@ -52,8 +49,9 @@
                     Aquí <span class="downText">podrás</span> crear tus propios <span class="color-gifos">GIFOS</span>
                 </h2>
                 <p class="text-info">
-                    ¡Crea tu GIFO en sólo 3 pasos!<span class="downText">(sólo necesitas una cámara para grabar un video)</span> 
+                    ¡Crea tu GIFO en sólo 3 pasos! 
                 </p>
+                <p>(sólo necesitas una cámara para grabar un video)</p>
             </div>
         </div>
         <div>
