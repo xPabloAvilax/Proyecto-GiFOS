@@ -27,23 +27,20 @@ fetch(trendingPath).then(function(res){
     console.log(err.message);
 });
 
-//funcion de trending
+//funcion de trending 
 
 fetch(topTrending).then(function(res){ 
     return res.json();
 }).then(function(json){
     
     const topElement= document.getElementById(`trending-top`);
-
     let trendingHtml = '';
-
-    let count=0;
-
+    
     json.data.forEach(function(obj){
         console.log(json.data);
         const url = obj.images.fixed_width.url
         const alt = obj.images.title
-        
+
             trendingHtml+=`<img 
             class="img-trending"
             src="${url}"

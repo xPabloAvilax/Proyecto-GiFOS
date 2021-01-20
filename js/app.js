@@ -6,7 +6,7 @@ let darkFooter = document.getElementById('footer');
 let changeName = document.getElementById('cambio')
 let modoNoc= false;
 
-//Funcion qye realiza el cambio a modo oscuro
+//Funcion que realiza el cambio a modo oscuro
 darkMode.addEventListener('click', ()=>{
     darkHeader.classList.toggle('darkMode');
     darkMain.classList.toggle('darkMode');
@@ -26,7 +26,7 @@ darkMode.addEventListener('click', ()=>{
 
 let btnHamburger = document.getElementById("menu-toggle");
 let cross = document.getElementById("menu-toggle")
-//se realiza un funcion con elemento clik, para despelgar menu y para cambiar la forma del menu hamburgesa
+//se realiza un funcion con elemento click, para despelgar menu y para cambiar la forma del menu hamburgesa
  btnHamburger.addEventListener("click", ()=>{
      let outnav = document.getElementById("navmenu__list")
      outnav.classList.toggle("nav-open");  
