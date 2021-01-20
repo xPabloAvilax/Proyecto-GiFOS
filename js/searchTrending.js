@@ -16,8 +16,6 @@ searchForm.addEventListener('submit', function(e) {
 function MaysPrimera(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
-
 function search(q) { 
 
     const pathSearch = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}`;
