@@ -31,8 +31,7 @@ let cross = document.getElementById("menu-toggle")
      let outnav = document.getElementById("navmenu__list")
      outnav.classList.toggle("nav-open");  
      cross.classList.toggle("menu-open");
-     
-
+     outnav.classList.toggle("nav-close");
  })
  
 

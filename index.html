@@ -14,41 +14,47 @@
 
 <body>
     <header id="header">
-        <div class="top-page"></div>
-        <div class="navmenu__logo">
+       
             <a href="index.html"><img class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
-             <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
-         </div>
-        <nav id="navmenu__list" class="navmenu__list"> 
+
+         
+        
+        <nav id="navmenu__list" class="navmenu__list nav-close" > 
                 <ul>
-                     <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
-                     <li> <a href="./favotites.html">Favoritos</a> </li>
-                     <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
-                 <div class="container-createGif">
+                     <li> <a class="link" id="cambio" href="#dmode">Modo Nocturno</a> </li>
+                     <li> <a class="link" href="./favotites.html">Favoritos</a> </li>
+                     <li> <a class="link" href="./misGIFOS.html">Mis GIFOS</a> </li>
+                         <div class="container-createGif">
                     <a href="createGif.html"><div id="gif-create"></div></a>
-                    <a href="createGif.html"><div></div></a>
+                    <a href="createGif.html"></a>
                  </div>
             </ul>
         </nav>  
-        <div id="menu-toggle" class="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
-             
+            <div id="menu-toggle" class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+                
     </header>
     <main>
         <section id="main">
             <div class="info-content">
                 <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
                 <img   class="img-header" src="assets/ilustra_header.svg" alt="">
-                    <form id="search-form">
-                        <div id="search-bar">
+
+                    <form id="search-form" class="contenedor-prueba">
+                        <div id="search-bar" >
                             <div class="container-input">
-                                <input id="search-input" type="text" placeholder="Busca GIFOS y más">
-                                <div class="container-btn">
-                                    <button class="btn-search">
-                                        <i class="fas fa-search"></i>
-                                    </button>
+                                <div class="input-suggs">
+                                    <input id="search-input" class="inpt-search" type="text" placeholder="Busca GIFOS y más" autocomplete="off" onkeypress="getSuggestions(searchInput)" onkeydown="chkEnter(event)">
+
                                 </div>
+                                
+                                <div class="container-btn">
+                                    <button id="btn-search" class="btn-search"><i class="fas fa-search"></i></button>
+                                    <div id="btn-icon"></div>
+                                </div>
+
+                                <div id="containerSuggestions"></div>
                             </div>  
                         </div>
                     </form>
@@ -58,13 +64,15 @@
                     <h2 id="title-categories"></h2>
                     
                 </div>
-                <div class="containerGifs">
-                    
+        
+                    <p id="titleGifs"></p>
                     <div id="searchGifs"></div> 
-                </div>
+
                 <div >
                     <button id="btnShowMore" class="displayBtn" class="btn-showMore">Ver Más</button>
                 </div>
+                
+                
                 
                 
             </div>
@@ -78,6 +86,7 @@
                     Mira los últimos GIFOS de nuestra comunidad.
                 </p>
                 <div id="trending-top"></div>
+                
             </div>
         </section>
     </main>
