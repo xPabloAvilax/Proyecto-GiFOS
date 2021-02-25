@@ -12,13 +12,11 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="body">
     <header id="header">
        
-            <a href="index.html"><img class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
+            <a href="index.html"><img id="header-logo" class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
 
-         
-        
         <nav id="navmenu__list" class="navmenu__list nav-close" > 
                 <ul>
                      <li> <a class="link" id="cambio" href="#dmode">Modo Nocturno</a> </li>
@@ -36,58 +34,53 @@
                 
     </header>
     <main>
-        <section id="main">
+        <section id="main" class="main">
             <div class="info-content">
                 <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
-                <img   class="img-header" src="assets/ilustra_header.svg" alt="">
+                <img  class="img-main" src="assets/ilustra_header.svg" alt="">
 
-                    <form id="search-form" class="contenedor-prueba">
-                        <div id="search-bar" >
-                            <div class="container-input">
-                                <div class="input-suggs">
-                                    <input id="search-input" class="inpt-search" type="text" placeholder="Busca GIFOS y más" autocomplete="off" onkeypress="getSuggestions(searchInput)" onkeydown="chkEnter(event)">
-
-                                </div>
-                                
-                                <div class="container-btn">
-                                    <button id="btn-search" class="btn-search"><i class="fas fa-search"></i></button>
-                                    <div id="btn-icon"></div>
-                                </div>
-
+                    <form onsubmit="return false" id="search-form" class="container-search">
+                        
+                            <button id="btn-search" class="btn-search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            
+                                    <input id="search-input" class="input-search" type="text" placeholder="Busca GIFOS y más" autocomplete="off">
+                                    <div class="btn-search-right" id="btn-search-right">
+                                        <i class="fas fa-search" id="btn-icon"></i>
+                                    </div>
                                 <div id="containerSuggestions"></div>
-                            </div>  
-                        </div>
+                        
+                        
                     </form>
                 <div>
                     <h2 class="title-trending">Trending:</h2>
-                    <div id="categories-trending"></div>
+                    <div class="categories-trending" id="categories-trending"></div>
                     <h2 id="title-categories"></h2>
-                    
+                    <div class="line" id="line"></div>  
                 </div>
-        
+                      
                     <p id="titleGifs"></p>
-                    <div id="searchGifs"></div> 
+                    <div class="searchGifs" id="searchGifs">
+                        
+                    </div> 
 
-                <div >
-                    <button id="btnShowMore" class="displayBtn" class="btn-showMore">Ver Más</button>
-                </div>
-                
-                
-                
+                    <div >
+                         <button id="btnShowMore" class="displayBtn" class="btn-showMore">Ver Más</button>
+                    </div>      
                 
             </div>
         </section>
-        <section id="top-trending">
-            <div class="trending-gifos">
-                <h2>
+        <section class="top-trending" id="top-trending">
+            
+                <h2 class="title-gifos">
                     Trending GIFOS
                 </h2>
                 <p class="text-trending">
                     Mira los últimos GIFOS de nuestra comunidad.
                 </p>
-                <div id="trending-top"></div>
+                <div class="trending-top" id="trending-top"></div>
                 
-            </div>
         </section>
     </main>
 

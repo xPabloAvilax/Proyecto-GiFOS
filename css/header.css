@@ -90,23 +90,11 @@ header {
     header .navmenu__list ul {
       display: flex;
       flex-direction: row;
-      color: aqua; }
-    header .navmenu__list ul li {
-      margin: 30px auto 15px auto;
-      text-align: center;
-      font-family: "Montserrat", sans-serif;
-      list-style: none; }
+      margin-right: 10px; }
     header .navmenu__list .link {
-      color: #ffffff;
-      text-decoration: none; }
-      header .navmenu__list .link::after {
-        content: "";
-        display: block;
-        height: 1px;
-        width: 40px;
-        background-color: #ffffff;
-        margin: 10px auto;
-        margin-top: 20px; }
+      color: #572EE5;
+      text-decoration: none;
+      margin: 0px 10px; }
   header .menu-toggle {
     display: none; }
 

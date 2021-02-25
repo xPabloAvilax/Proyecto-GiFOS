@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header{
   width: 100%;
   display: flex;
@@ -36,6 +37,7 @@ header{
      margin-top: 940px;
      padding-bottom: 80vh;
      opacity: 85%;
+    
   
     
      
@@ -118,8 +120,6 @@ header{
     }
      .navmenu__list{
       background: none;
-      
-      
       width: auto;
       padding-bottom:0;    
       position: relative;
@@ -131,30 +131,14 @@ header{
        ul{
         display: flex;
         flex-direction: row;
-        color: aqua;
+        margin-right: 10px;
        }
   
-       ul li{
-        margin: 30px auto 15px auto ;
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        list-style: none;
-       
-      }
-  
       .link{
-        color: #ffffff;
+        color: #572EE5;
         text-decoration: none;
-  
-         &::after {
-          content: "";
-          display: block;
-          height: 1px;
-          width: 40px;
-          background-color: #ffffff;
-          margin: 10px auto;
-          margin-top: 20px;
-        }
+        margin: 0px 10px;
+        
       }  
      }
      
@@ -164,7 +148,6 @@ header{
     
   }
 
- 
   #gif-create {
     background-image: url("../assets/button-crear-gifo.svg");
     background-repeat: no-repeat;

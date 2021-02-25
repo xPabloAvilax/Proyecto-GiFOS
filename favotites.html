@@ -11,48 +11,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
-
-<body>
+<body id="body">
     <header id="header">
-        <div class="top-page"></div>
-        <div class="navmenu__logo">
-            <a href="index.html"><img class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
-             <a href="index.html"><img class="imglogo-dark" src="./assets/logo-mobile-modo-noct.svg" alt="logo de la pagina modo oscuro"></a>
-         </div>
-        <nav id="navmenu__list" class="navmenu__list"> 
+       
+            <a href="index.html"><img id="header-logo" class="img-logo" src="assets/logo-mobile.svg" alt="logo de la pagina"/></a> 
+
+        <nav id="navmenu__list" class="navmenu__list nav-close" > 
                 <ul>
-                     <li> <a id="cambio" href="#dmode" onclick="dark()">Modo Nocturno</a> </li>
-                     <li> <a href="./favotites.html">Favoritos</a> </li>
-                     <li> <a href="./misGIFOS.html">Mis GIFOS</a> </li>
-                 <div class="container-createGif">
+                     <li> <a class="link" id="cambio" href="#dmode">Modo Nocturno</a> </li>
+                     <li> <a class="link" href="./favotites.html">Favoritos</a> </li>
+                     <li> <a class="link" href="./misGIFOS.html">Mis GIFOS</a> </li>
+                         <div class="container-createGif">
                     <a href="createGif.html"><div id="gif-create"></div></a>
-                    <a href="createGif.html"><div></div></a>
+                    <a href="createGif.html"></a>
                  </div>
             </ul>
         </nav>  
-        <div id="menu-toggle" class="menu-toggle">
-            <div class="hamburger"></div>
-        </div>
-             
+            <div id="menu-toggle" class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+                
     </header>
     <main>
-        <section id="main">
-            <div class="info-content">
-                <img class="img-favorites" src="./assets/icon-favoritos.svg" alt="">
-                <h2 class="title-favorites">Favoritos</h1>
-            </div>
-               
-        </section>
-        <section id="top-trending">
-            <div class="trending-gifos">
-                <h2>
+
+        <div class="fav-content">
+            <img class="img-favorites" src="./assets/icon-favoritos.svg" alt="">
+            <h2 class="title-favorites">Favoritos</h1>
+        </div>
+           
+        <section class="top-trending" id="top-trending">
+            
+                <h2 class="title-gifos">
                     Trending GIFOS
                 </h2>
-                <p>
+                <p class="text-trending">
                     Mira los últimos GIFOS de nuestra comunidad.
                 </p>
-                <div id="trending-top"></div>
-            </div>
+                <div class="trending-top" id="trending-top"></div>
+                
         </section>
     </main>
 
@@ -72,3 +68,5 @@
 <script src="./js/app.js"></script>
 <script src="./js/searchTrending.js"></script>
 </html>
+
+

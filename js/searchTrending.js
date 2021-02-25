@@ -3,11 +3,33 @@ let searchInput = document.getElementById('search-input');
 let btnShowMore = document.getElementById('btnShowMore');
 let elementGif = document.getElementById("searchGifs");
 let btnSearch = document.getElementById("btn-search");
+let btnRigthSearch = document.getElementById("btn-search-right")
 let suggestionsCont = document.getElementById("containerSuggestions")
+let lineSearch= document.getElementById("line")
 let clickButtonSearch= false;
 let btnIcon= document.getElementById("btn-icon")
+let open= false;
 let imgMore = 8;
 let offset= 0;
+
+function iconSearch(element, remove, add, show){
+    element.addEventListener("click", ()=>{
+        btnIcon.classList.remove(remove);
+        btnIcon.classList.add(add);
+        btnSearch.style.display= show;
+        if(element == searchInput && open == false){
+            open=true;
+        }else if(element == btnRigthSearch && open ==true){
+            searchInput.value="";
+            open= false;
+        }
+        
+    })
+    
+}
+iconSearch(searchInput, "fa-search", "fa-times", "block", );
+iconSearch(btnRigthSearch, "fa-times", "fa-search", "none");
+
 
 function search(){
     async function gifSearch(q){
@@ -46,39 +68,44 @@ function search(){
             divContainer.appendChild(img);
             divContainer.appendChild(divImg);
             divContainer.appendChild(divBtn);
-            elementGif.appendChild(divContainer)
+            elementGif.appendChild(divContainer);
 
-
-
-            elementGif.appendChild(divContainer)  
-
-
-           
-       }        
+                        // if(open == true){
+                        //                     btnRigthSearch.addEventListener("click", ()=>{
+                        //                         divContainer.remove(elementGif);
+                        //                     lineSearch.style.display="none";   
+                        //                      })
+                        //                     }
+ 
+       } 
+             
     }).catch(err =>{
         console.log(err);
     })
+    lineSearch.style.display="block"
 }
 
-btnSearch.addEventListener("click", (e)=>{
+
+btnIcon.addEventListener("click", (e)=>{
     e.preventDefault();
-    
     const q = searchInput.value;
     let titulo = document.getElementById("titleGifs");
     titulo.innerHTML=q;
     search();
     ShowMore();
+    
 })
 
 
 
 searchForm.addEventListener("keyup", (e)=>{
-    e.preventDefault();
     if (event.which === 13 || event.keyCode == 13) {
+        e.preventDefault();
         const q = searchInput.value;
-        let search_term = document.getElementById("searchTerm")
+        let search_term = document.getElementById("titleGifs")
         search_term.innerHTML = q;
         search();
+        ShowMore();
     }
 })
 
@@ -89,79 +116,73 @@ function ShowMore(){
 }
 
 btnShowMore.addEventListener("click", (e)=>{
-    e.preventDefault()
-  //imgMore+=8;   
+    e.preventDefault()   
   offset+=8;
-  console.log(imgMore);
-//   if(imgMore >= 24){
-//       btnShowMore.classList.remove("btn-showMore");
-//   }
   search(searchInput.value)
 
 })
 
 ////////////////////////////Suggestions
 
-const getSuggestions = async () => {
-    if(searchInput.value.length >=2){
-        let url = `https://api.giphy.com/v1/tags/related/${searchInput.value}?api_key=${api_key}`;
-        const respSuggetions = await fetch(url);
-        const suggestions =  await respSuggetions.json();
-        console.log(suggestions);
-        suggestionsCont.style.display="block"
-        addSugerencias(suggestions)
-    }
-}
+// const getSuggestions = async () => {
+//     if(searchInput.value.length >=2){
+//         let url = `https://api.giphy.com/v1/tags/related/${searchInput.value}?api_key=${api_key}`;
+//         const respSuggetions = await fetch(url);
+//         const suggestions =  await respSuggetions.json();
+//         console.log(suggestions);
+//         suggestionsCont.style.display="block"
+//         addSugerencias(suggestions)
+//     }
+// }
 
-function addSugerencias(suggestions) {
-    suggestionsCont.innerHTML = ""
-    clickButtonSearch = true;
-    for (let i = 0; i < suggestions.data.length; i++) {
+// function addSugerencias(suggestions) {
+//     suggestionsCont.innerHTML = ""
+//     clickButtonSearch = true;
+//     for (let i = 0; i < 5; i++) {
     
+//         let suggestion = suggestions.data[i].name;
+//         console.log(suggestion);
+//         //cambia la lupa por la X
         
-        let suggestion = suggestions.data[i].name;
-        console.log(suggestion);
-        //cambia la lupa por la X
-        btnIcon.style.background = "url(../assets/close.svg) no-repeat"
-        //rellena  las sugerencias
-        suggestionsCont.innerHTML += `
-        <div>
-        <div class="search-suggestion">
-        <img src="../assets/icon-search.svg" style="height:15.8px;opacity:70%">
-        </div>
-        <div class="txt-suggestion" 
-        id="txt-suggestion${i}"
-        onclick="ejecutarBusqueda('${suggestion}')">
-        ${suggestion}
-        </div>
-        </div>`;
-        let suggestionDiv = document.createElement("div");
-        suggestionDiv.className("search-suggestion");
-        let imgSuggestion = document.createElement("img");
-        imgSuggestion.setAttribute("src", "../assets/icon-search.svg");
-        let textSuggDiv= createElement("div","class","txt-suggestion", "id", "txt-suggestion")
+//         //rellena  las sugerencias
+//         suggestionsCont.innerHTML += `
+//         <div>
+//         <div class="search-suggestion">
+//         <img src="../assets/icon-search.svg" style="opacity:70%">
+//         </div>
+//         <div class="txt-suggestion" 
+//         id="txt-suggestion${i}"
+//         onclick="ejecutarBusqueda('${suggestion}')">
+//         ${suggestion}
+//         </div>
+//         </div>`;
+//         // let suggestionDiv = document.createElement("div");
+//         // suggestionDiv.className("search-suggestion");
+//         // let imgSuggestion = document.createElement("img");
+//         // imgSuggestion.setAttribute("src", "../assets/icon-search.svg");
+//         // let textSuggDiv= createElement("div","class","txt-suggestion", "id", "txt-suggestion")
         
-    };
-};
+//     };
+// };
 
-function chkEnter(event) {
-    let x = event.key;
-    if (x === "Enter") {
+// function chkEnter(event) {
+//     let x = event.key;
+//     if (x === "Enter") {
         
-        if (searchInput.value === "") {
-            alert('ingrese un término de búsqueda') // resupuesta provisoria
-        } else {
-            closeSuggestions()       
-        }
+//         if (searchInput.value === "") {
+//             alert('ingrese un término de búsqueda') // resupuesta provisoria
+//         } else {
+//             closeSuggestions()       
+//         }
         
-    };
-}
+//     };
+// }
 
-function closeSuggestions() {
-    if (clickButtonSearch) {
-        //terminoBuscado.value = ""
-        suggestionsCont.style.display= "none"
-        btnIcon.style.background = "url(../sssets/icon-search.svg) no-repeat"
-    }
-}
+// function closeSuggestions() {
+//     if (clickButtonSearch) {
+//         //terminoBuscado.value = ""
+//         suggestionsCont.style.display= "none"
+//         btnIcon.style.background = "url(../sssets/icon-search.svg) no-repeat"
+//     }
+// }
 

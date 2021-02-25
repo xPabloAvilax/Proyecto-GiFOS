@@ -1,203 +1,53 @@
-.info-content h1 {
-  font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 25px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 33px;
-  font-weight: bold;
-  height: 99px;
-  width: 286px;
-  margin: auto;
-  margin-top: -2px;
-  padding-top: 30px; }
+/*
+Error: Invalid CSS after "...: space-between": expected ";", was ".btn-search{"
+        on line 26 of C:\Users\Pablito\Desktop\Proyecto Gifos\sass\infocontent.scss
 
-.gifos {
-  color: #50E3C2; }
+21:             border-radius: 15px;
+22:             margin-top: -4px;
+23:             display: flex;
+24:             justify-content: space-between
+25:        
+26:          .btn-search{
+27:             border: none;
+28:             outline: none;
+29:             background: none;
+30:             margin-left: 10px;
+31:             margin-top: 7px;
 
-.img-header {
-  margin-left: 45px;
-  height: 230px;
-  width: 273px;
-  margin-top: -31px; }
-
-.img-favorites {
-  padding-top: 30px;
-  margin-left: 174px;
-  width: 28px;
-  height: 21px; }
-
-.title-favorites {
-  font-family: 'Montserrat-Bold', sans-serif;
-  color: #572EE5;
-  font-size: 20px;
-  text-align: center;
-  margin-top: -30px; }
-
-.container-input input {
-  border: 1px solid #572EE5;
-  height: 50px;
-  outline: none;
-  width: 330px;
-  transform: translate(20px, -20px);
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  padding-left: 10px;
-  border-radius: 27px;
-  position: absolute;
-  top: 358px;
-  font-size: 16px; }
-
-.container-input .container-btn {
-  line-height: 55px;
-  position: absolute;
-  right: 40px;
-  top: 338px;
-  text-align: center;
-  color: #572EE5; }
-
-#search-bar input::placeholder {
-  padding: 10px 0 10px 50px;
-  font-family: 'Roboto-Regular', sans-serif;
-  font-size: 16px;
-  color: #6B7989; }
-
-.btn-search {
-  background: none;
-  border: none;
-  color: #572EE5;
-  font-size: 20px;
-  font-weight: 100; }
-
-.displayBtn {
-  display: none; }
-
-.btn-showMore {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
-  border: 1px solid #572EE5;
-  border-radius: 25px;
-  outline: none;
-  background: none;
-  font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #572EE5;
-  letter-spacing: 0;
-  padding: 16px 30px;
-  text-align: center; }
-
-.btn-search:focus {
-  outline: none;
-  border: none; }
-
-#containerSuggestions {
-  display: none;
-  color: #9CAFC3;
-  padding: 15px 0px 13px 55px; }
-
-.search-suggestion {
-  width: 20px;
-  height: 25px;
-  margin-right: 5px;
-  display: inline-block; }
-
-.txt-suggestion {
-  display: inline-block; }
-
-.title-trending {
-  text-align: center;
-  color: #572EE5;
-  font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  margin-top: 31px; }
-
-#categories-trending {
-  display: flex;
-  height: 80px;
-  margin-left: 20px; }
-  #categories-trending p {
-    color: #572EE5;
-    font-size: 16px;
-    font-family: 'Montserrat-Medium', sans-serif;
-    line-height: 25px;
-    text-transform: capitalize; }
-
-#title-categories {
-  font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 25px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 40px;
-  font-weight: bold; }
-
-.trending-gifos {
-  background-color: #F3F5F8;
-  height: 450px; }
-  .trending-gifos h2 {
-    padding-top: 46px;
-    font-size: 20px;
-    color: #572EE5;
-    text-align: center; }
-
-.text-trending {
-  font-family: 'Roboto-Regular', sans-serif;
-  color: #000000;
-  line-height: 23px;
-  font-size: 16px; }
-
-.show_gifs {
-  margin-bottom: 10px;
-  padding-left: 20px; }
-
-#searchGifs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin: auto; }
-
-.div-Container {
-  margin: 10px 5px;
-  width: 146px;
-  height: 120px; }
-
-.size-image {
-  height: 100%;
-  width: 100%; }
-
-.btn-container {
-  position: absolute;
-  width: 110px;
-  margin-top: -117px;
-  margin-left: 80px; }
-
-.btn-all {
-  background: #FFFFFF;
-  border-radius: 6px;
-  width: 32px;
-  height: 32px; }
-
-#titleGifs {
-  color: #572EE5;
-  font-family: 'Montserrat-Bold', sans-serif;
-  font-size: 25px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 40px;
-  text-transform: capitalize;
-  font-weight: bold; }
-
-#trending-top {
-  display: flex;
-  overflow: scroll; }
-
-.img-trending {
-  width: 243px;
-  height: 187px;
-  padding: 10px; }
-
-/*# sourceMappingURL=infocontent.css.map */
+Backtrace:
+C:\Users\Pablito\Desktop\Proyecto Gifos\sass\infocontent.scss:26
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:804:in `block in try_declaration'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `call'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `rethrow'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:809:in `try_declaration'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...: space-between\": expected \";\", was \".btn-search{\"\A         on line 26 of C:\Users\Pablito\Desktop\Proyecto Gifos\sass\infocontent.scss\A \A 21:             border-radius: 15px;\A 22:             margin-top: -4px;\A 23:             display: flex;\A 24:             justify-content: space-between\A 25:        \A 26:          .btn-search{\A 27:             border: none;\A 28:             outline: none;\A 29:             background: none;\A 30:             margin-left: 10px;\A 31:             margin-top: 7px;"; }
