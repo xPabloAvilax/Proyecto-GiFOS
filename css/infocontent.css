@@ -40,6 +40,10 @@
       background: none;
       color: #572EE5;
       margin-right: 10px; }
+    .main .container-search .search {
+      width: 300px;
+      display: flex;
+      justify-content: space-around; }
   .main .line {
     border-bottom: 1px solid #572EE5;
     width: 30%;

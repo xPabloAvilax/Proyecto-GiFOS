@@ -31,8 +31,8 @@ function iconSearch(element, remove, add, show){
 iconSearch(searchInput, "fa-search", "fa-times", "block", );
 iconSearch(btnRigthSearch, "fa-times", "fa-search", "none");
 
-function search(){
-    async function gifSearch(q){
+function search(q){
+    async function gifSearch(){
         let pathSearch = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=${imgMore}&offset=${offset}`;
         
         const res = await fetch(pathSearch);
@@ -147,7 +147,8 @@ const autocomplete = ()=> {
 
             suggestionLi.addEventListener("click", function(){
                 searchInput.value = text.textContent;
-                ulSuggestion.classList.remove("suggestionShow")
+                ulSuggestion.classList.remove("suggestionShow");
+                
             })
 
         }
