@@ -31,8 +31,8 @@ function iconSearch(element, remove, add, show){
 iconSearch(searchInput, "fa-search", "fa-times", "block", );
 iconSearch(btnRigthSearch, "fa-times", "fa-search", "none");
 
-function search(q){
-    async function gifSearch(){
+function search(){
+    async function gifSearch(q){
         let pathSearch = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=${imgMore}&offset=${offset}`;
         
         const res = await fetch(pathSearch);
@@ -145,10 +145,12 @@ const autocomplete = ()=> {
             suggestionLi.appendChild(text);
             ulSuggestion.appendChild(suggestionLi);
 
-            suggestionLi.addEventListener("click", function(){
+            suggestionLi.addEventListener("click", function(e){
+                e.preventDefault();
                 searchInput.value = text.textContent;
                 ulSuggestion.classList.remove("suggestionShow");
-                
+                searchForm.style.borderRadius= "25px";
+                searchForm.style.borderBottom= "1px solid";
             })
 
         }
@@ -159,8 +161,13 @@ const autocomplete = ()=> {
         ulSuggestion.classList.add("suggestionShow")
     }else{
         ulSuggestion.classList.remove("suggestionShow")
-
+        
     }
 
 }
-searchInput.addEventListener("keyup", autocomplete)
+searchInput.addEventListener("keyup", () =>{
+    autocomplete()
+    searchForm.style.borderRadius= "25px 25px 0 0";
+    searchForm.style.borderBottom= "hidden"
+
+})

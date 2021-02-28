@@ -1,4 +1,4 @@
-let limite = 40;
+let limite = 20;
 let off= 0;
 const api_key = "Nt8kz56S3R0wbsbVh9seCUoA3lVvqRem";
 const trendingPath = `https://api.giphy.com/v1/trending/searches?api_key=${api_key}`;

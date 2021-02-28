@@ -302,7 +302,15 @@ p {
 
 .suggestionShow {
   display: inline;
-  height: 155px; }
+  height: 155px;
+  position: absolute;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  width: 300px;
+  margin-left: -1px;
+  margin-top: 33px;
+  border-radius: 0px 0px 25px 25px; }
 
 #suggestion p {
   padding-left: 20px;
