@@ -57,19 +57,9 @@
         width: 30%;
         margin: 25px auto;
         display: none;
+    }   
     }
-
-    .title-trending{
-            font-family: "Montserrat", sans-serif;
-            font-size: 16px;
-            color: #572ee5;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            body.darkMode &{
-                color: #FFFFFF;
-            }
-        
-    }
+    
 
     .categories-trending{
         display: flex;
@@ -105,7 +95,7 @@
                             text-transform: uppercase;
   }
     }
-}
+
 
 .displayBtn{
     display: none;
@@ -147,25 +137,64 @@
     margin: 10px ;
 }
 
-#containerSuggestions {
-    display: none; 
-    color: #9CAFC3;
-    padding: 15px 0px 13px 55px;
-    
-  }
-   .search-suggestion{
-     width: 20px;
-     height: 25px;
-    margin-right: 5px;
-     display: inline-block;
-    
-  }
-  
-  .txt-suggestion {
+.suggestion{
+    width: 80%;
+    max-height: 155px;
+    overflow: hidden;
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+}
+.title-trending{
+    color: #572EE5;
+    font-size: 16px;
+}
+.suggestionShow{
+    display: inline;
+    height: 155px;
+}
+#suggestion p {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto-Regular', sans-serif;
+    cursor: pointer;
+}
+.textSuggestion::before{
+    content: url('../assets/icon-search.svg');
     display: inline-block;
+    margin-right: 20px;
+    transform: scale(0.8);
+}
+.animacion-sugerencias{
+
+    animation: appear 0.5s linear;
+    animation-timing-function: ease-in;
+}
+.li-search{
     
-  }
-  .fav-content{
+    color: lightslategray;
+    list-style: none;
+    padding-top: 12px;
+
+}
+
+
+@keyframes appear{
+
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+.fav-content{
       margin-top: 110px;
       width: 100%;
 
@@ -175,6 +204,30 @@
       }
 
   }
+.move-gif{
+    display: none;
+}
+.gifs{
+    margin: 0 10px;
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+}
+.stopBtn{
+    width: 100%;
+    display: flex;
+}
+
+//prueba de los botones <- ->
+
+@media only screen and (min-width: 320px){
+    .main{
+        .img-main{
+                width: 50%; 
+        }
+    }
+
+}
 
 @media only screen and (min-width: 1024px) {
     .div-Container{
@@ -184,9 +237,50 @@
     }
     .searchGifs{
         width: 1024px;
-        margin: auto;
-        
+        margin: auto;   
     }
     
-
+    .btn-container{
+        position: absolute;
+        margin-top: -198px;
+        margin-left: 110px;
+    }
+    .btn-all{
+        background-color: #FFFFFF;
+        opacity: 70%;
+        border-radius: 6px;
+        padding: 10px;
+        margin-left: 5px;
+    }
+    .div-Container{
+        width: 240px;
+        height: 200px;
+        margin: 10px ;
+    }
+    .move-gif{
+        display: inline-block;
+    }
+    .trending-container{
+        justify-content: space-evenly;
+        width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        
+    }
+    .stopBtn{
+        width: 960px;
+        display: flex;
+        justify-content: center; 
+    }
+    .trending-top{
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+        .img-main{
+                width: 30%; 
+        }
+    }
+    
 }

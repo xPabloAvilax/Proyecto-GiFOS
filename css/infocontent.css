@@ -1,53 +1,231 @@
-/*
-Error: Invalid CSS after "...: space-between": expected ";", was ".btn-search{"
-        on line 26 of C:\Users\Pablito\Desktop\Proyecto Gifos\sass\infocontent.scss
+.main {
+  margin-top: 130px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #572EE5; }
+  .main h1 {
+    width: 240px;
+    margin: 0 auto 40px auto; }
+  .main .gifos {
+    color: #5ED7C6; }
+  .main .img-main {
+    width: 300px; }
+  .main .container-search {
+    border: 1px #572EE5 solid;
+    width: 300px;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: -4px;
+    display: flex;
+    justify-content: space-between; }
+    .main .container-search .btn-search {
+      border: none;
+      outline: none;
+      background: none;
+      margin-left: 10px;
+      margin-top: 7px;
+      display: none;
+      color: #9CAFC3; }
+    .main .container-search .input-search {
+      margin-top: 4px;
+      border: none;
+      font-size: 15px;
+      padding: 6px 0px;
+      outline: none;
+      margin-left: 17px; }
+    .main .container-search .btn-search-right {
+      border: none;
+      margin-top: 7px;
+      outline: none;
+      background: none;
+      color: #572EE5;
+      margin-right: 10px; }
+  .main .line {
+    border-bottom: 1px solid #572EE5;
+    width: 30%;
+    margin: 25px auto;
+    display: none; }
 
-21:             border-radius: 15px;
-22:             margin-top: -4px;
-23:             display: flex;
-24:             justify-content: space-between
-25:        
-26:          .btn-search{
-27:             border: none;
-28:             outline: none;
-29:             background: none;
-30:             margin-left: 10px;
-31:             margin-top: 7px;
+.categories-trending {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  width: 250px; }
+  .categories-trending p {
+    color: #572EE5;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif; }
+    body.darkMode .categories-trending p {
+      color: #FFFFFF; }
+    .categories-trending p::first-letter {
+      text-transform: uppercase; }
 
-Backtrace:
-C:\Users\Pablito\Desktop\Proyecto Gifos\sass\infocontent.scss:26
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:804:in `block in try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `call'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `rethrow'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:809:in `try_declaration'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...: space-between\": expected \";\", was \".btn-search{\"\A         on line 26 of C:\Users\Pablito\Desktop\Proyecto Gifos\sass\infocontent.scss\A \A 21:             border-radius: 15px;\A 22:             margin-top: -4px;\A 23:             display: flex;\A 24:             justify-content: space-between\A 25:        \A 26:          .btn-search{\A 27:             border: none;\A 28:             outline: none;\A 29:             background: none;\A 30:             margin-left: 10px;\A 31:             margin-top: 7px;"; }
+#titleGifs {
+  color: #572EE5;
+  font-size: 25px;
+  margin: 30px 0;
+  font-family: "Montserrat", sans-serif; }
+  body.darkMode #titleGifs {
+    color: #FFFFFF; }
+  #titleGifs:first-letter {
+    text-transform: uppercase; }
+
+.displayBtn {
+  display: none; }
+
+.btn-showMore {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  outline: none;
+  background: none;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #572EE5;
+  letter-spacing: 0;
+  padding: 16px 30px;
+  text-align: center; }
+
+.searchGifs {
+  margin-top: 120px;
+  padding-bottom: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center; }
+
+.size-image {
+  width: 100%;
+  height: 100%; }
+
+.div-Container {
+  width: 140px;
+  height: 120px;
+  margin: 10px; }
+
+.suggestion {
+  width: 80%;
+  max-height: 155px;
+  overflow: hidden;
+  display: none;
+  background-color: white;
+  border-radius: 20px;
+  text-align: left; }
+
+.title-trending {
+  color: #572EE5;
+  font-size: 16px; }
+
+.suggestionShow {
+  display: inline;
+  height: 155px; }
+
+#suggestion p {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto-Regular', sans-serif;
+  cursor: pointer; }
+
+.textSuggestion::before {
+  content: url("../assets/icon-search.svg");
+  display: inline-block;
+  margin-right: 20px;
+  transform: scale(0.8); }
+
+.animacion-sugerencias {
+  animation: appear 0.5s linear;
+  animation-timing-function: ease-in; }
+
+.li-search {
+  color: lightslategray;
+  list-style: none;
+  padding-top: 12px; }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+.fav-content {
+  margin-top: 110px;
+  width: 100%; }
+  .fav-content img {
+    margin: auto;
+    display: block; }
+
+.move-gif {
+  display: none; }
+
+.gifs {
+  margin: 0 10px;
+  width: 300px;
+  height: 250px;
+  cursor: pointer; }
+
+.stopBtn {
+  width: 100%;
+  display: flex; }
+
+@media only screen and (min-width: 320px) {
+  .main .img-main {
+    width: 50%; } }
+@media only screen and (min-width: 1024px) {
+  .div-Container {
+    width: 200px;
+    height: 160px;
+    margin: 10px; }
+
+  .searchGifs {
+    width: 1024px;
+    margin: auto; }
+
+  .btn-container {
+    position: absolute;
+    margin-top: -198px;
+    margin-left: 110px; }
+
+  .btn-all {
+    background-color: #FFFFFF;
+    opacity: 70%;
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: 5px; }
+
+  .div-Container {
+    width: 240px;
+    height: 200px;
+    margin: 10px; }
+
+  .move-gif {
+    display: inline-block; }
+
+  .trending-container {
+    justify-content: space-evenly;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex; }
+
+  .stopBtn {
+    width: 960px;
+    display: flex;
+    justify-content: center; }
+
+  .trending-top {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center; }
+
+  .main .img-main {
+    width: 30%; } }
+
+/*# sourceMappingURL=infocontent.css.map */

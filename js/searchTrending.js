@@ -6,9 +6,9 @@ let btnSearch = document.getElementById("btn-search");
 let btnRigthSearch = document.getElementById("btn-search-right")
 let suggestionsCont = document.getElementById("containerSuggestions")
 let lineSearch= document.getElementById("line")
-let clickButtonSearch= false;
 let btnIcon= document.getElementById("btn-icon")
-let open= false;
+let ulSuggestion = document.getElementById("suggestion")
+
 let imgMore = 8;
 let offset= 0;
 
@@ -27,17 +27,19 @@ function iconSearch(element, remove, add, show){
     })
     
 }
+
 iconSearch(searchInput, "fa-search", "fa-times", "block", );
 iconSearch(btnRigthSearch, "fa-times", "fa-search", "none");
-
 
 function search(){
     async function gifSearch(q){
         let pathSearch = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=${imgMore}&offset=${offset}`;
-        console.log(pathSearch);
+        
         const res = await fetch(pathSearch);
         const info = await res.json()
+    
         return info;
+        ;
     }
 
     let info = gifSearch(searchInput.value);
@@ -47,14 +49,14 @@ function search(){
             let img = document.createElement("img");
             img.setAttribute("src", info.data[i].images.fixed_width.url);
             img.setAttribute("class", "size-image")
-            
 
-            let divContainer = document.createElement("div");
-            let favBtn = document.createElement("div");
-            let btnDownload = document.createElement("div");
-            let btnExpand= document.createElement("div");
+            
+            let favBtn = document.createElement("button");
+            let btnDownload = document.createElement("button");
+            let btnExpand= document.createElement("button");
             let divBtn = document.createElement("div");
             let divImg = document.createElement("div");
+            let divContainer = document.createElement("div");
 
             divImg.setAttribute("class" , "img-div");
             divBtn.setAttribute("class", "btn-container");
@@ -70,12 +72,12 @@ function search(){
             divContainer.appendChild(divBtn);
             elementGif.appendChild(divContainer);
 
-                        // if(open == true){
-                        //                     btnRigthSearch.addEventListener("click", ()=>{
-                        //                         divContainer.remove(elementGif);
-                        //                     lineSearch.style.display="none";   
-                        //                      })
-                        //                     }
+            if(open == true){
+                btnRigthSearch.addEventListener("click", ()=>{
+                elementGif.removeChil(divContainer);
+                lineSearch.style.display="none";   
+            })
+            }
  
        } 
              
@@ -120,69 +122,44 @@ btnShowMore.addEventListener("click", (e)=>{
   offset+=8;
   search(searchInput.value)
 
-})
+});
 
-////////////////////////////Suggestions
-
-// const getSuggestions = async () => {
-//     if(searchInput.value.length >=2){
-//         let url = `https://api.giphy.com/v1/tags/related/${searchInput.value}?api_key=${api_key}`;
-//         const respSuggetions = await fetch(url);
-//         const suggestions =  await respSuggetions.json();
-//         console.log(suggestions);
-//         suggestionsCont.style.display="block"
-//         addSugerencias(suggestions)
-//     }
-// }
-
-// function addSugerencias(suggestions) {
-//     suggestionsCont.innerHTML = ""
-//     clickButtonSearch = true;
-//     for (let i = 0; i < 5; i++) {
+const autocomplete = ()=> {
+    let search = searchInput.value;
+    ulSuggestion.innerHTML="";
     
-//         let suggestion = suggestions.data[i].name;
-//         console.log(suggestion);
-//         //cambia la lupa por la X
-        
-//         //rellena  las sugerencias
-//         suggestionsCont.innerHTML += `
-//         <div>
-//         <div class="search-suggestion">
-//         <img src="../assets/icon-search.svg" style="opacity:70%">
-//         </div>
-//         <div class="txt-suggestion" 
-//         id="txt-suggestion${i}"
-//         onclick="ejecutarBusqueda('${suggestion}')">
-//         ${suggestion}
-//         </div>
-//         </div>`;
-//         // let suggestionDiv = document.createElement("div");
-//         // suggestionDiv.className("search-suggestion");
-//         // let imgSuggestion = document.createElement("img");
-//         // imgSuggestion.setAttribute("src", "../assets/icon-search.svg");
-//         // let textSuggDiv= createElement("div","class","txt-suggestion", "id", "txt-suggestion")
-        
-//     };
-// };
+    let autocomplete = fetch(`https://api.giphy.com/v1/tags/related/${search}?api_key=${api_key}&limit=4`)
+    .then(resp => resp.json())
 
-// function chkEnter(event) {
-//     let x = event.key;
-//     if (x === "Enter") {
+    autocomplete.then(info =>{
         
-//         if (searchInput.value === "") {
-//             alert('ingrese un término de búsqueda') // resupuesta provisoria
-//         } else {
-//             closeSuggestions()       
-//         }
-        
-//     };
-// }
+        for(i= 0; i<info.data.length; i++){
 
-// function closeSuggestions() {
-//     if (clickButtonSearch) {
-//         //terminoBuscado.value = ""
-//         suggestionsCont.style.display= "none"
-//         btnIcon.style.background = "url(../sssets/icon-search.svg) no-repeat"
-//     }
-// }
+            let text =document.createElement("p");
+            let suggestionLi = document.createElement("li");
 
+            text.setAttribute("class", "textSuggestion");
+            suggestionLi.setAttribute("class","li-search");
+            
+            text.textContent= info.data[i].name;
+            suggestionLi.appendChild(text);
+            ulSuggestion.appendChild(suggestionLi);
+
+            suggestionLi.addEventListener("click", function(){
+                searchInput.value = text.textContent;
+                ulSuggestion.classList.remove("suggestionShow")
+            })
+
+        }
+
+    }).catch(err => console.log(err))
+
+    if(search !== ""){
+        ulSuggestion.classList.add("suggestionShow")
+    }else{
+        ulSuggestion.classList.remove("suggestionShow")
+
+    }
+
+}
+searchInput.addEventListener("keyup", autocomplete)

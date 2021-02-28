@@ -35,7 +35,7 @@
     </header>
     <main>
         <section id="main" class="main">
-            <div class="info-content">
+            
                 <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
                 <img  class="img-main" src="assets/ilustra_header.svg" alt="">
 
@@ -44,12 +44,15 @@
                             <button id="btn-search" class="btn-search">
                                 <i class="fas fa-search"></i>
                             </button>
-                            
+
+                               <div class="search">
                                     <input id="search-input" class="input-search" type="text" placeholder="Busca GIFOS y más" autocomplete="off">
                                     <div class="btn-search-right" id="btn-search-right">
-                                        <i class="fas fa-search" id="btn-icon"></i>
+                                    <i class="fas fa-search" id="btn-icon"></i>
                                     </div>
-                                <div id="containerSuggestions"></div>
+                               </div>
+                                    <div id="suggestion" class="suggestion"></div>
+                                    
                         
                         
                     </form>
@@ -60,16 +63,13 @@
                     <div class="line" id="line"></div>  
                 </div>
                       
-                    <p id="titleGifs"></p>
-                    <div class="searchGifs" id="searchGifs">
-                        
-                    </div> 
-
-                    <div >
-                         <button id="btnShowMore" class="displayBtn" class="btn-showMore">Ver Más</button>
-                    </div>      
+                <p id="titleGifs"></p>
+                <div class="searchGifs" id="searchGifs"></div>
+                <div >
+                     <button id="btnShowMore" class="displayBtn" class="btn-showMore">Ver Más</button>
+                 </div>      
                 
-            </div>
+            
         </section>
         <section class="top-trending" id="top-trending">
             
@@ -79,7 +79,15 @@
                 <p class="text-trending">
                     Mira los últimos GIFOS de nuestra comunidad.
                 </p>
-                <div class="trending-top" id="trending-top"></div>
+                <div class="trending-container">
+                    <img src="./assets/button-slider-left.svg" alt="flecha-retroceder" id="btn-left" class="move-gif">
+                    <div class="stopBtn">
+                        <div class="trending-top" id="trending-top"></div>
+                    </div>
+                    <img src="./assets/Button-Slider-right.svg" alt="flecha-avanzar" id="btn-rigth"class="move-gif">
+                    
+                </div>
+                
                 
         </section>
     </main>

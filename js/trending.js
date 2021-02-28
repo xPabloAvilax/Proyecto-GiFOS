@@ -1,15 +1,120 @@
+let limite = 40;
+let off= 0;
 const api_key = "Nt8kz56S3R0wbsbVh9seCUoA3lVvqRem";
 const trendingPath = `https://api.giphy.com/v1/trending/searches?api_key=${api_key}`;
-const topTrending= `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}`;
+//const topTrending= ;
+let trendigContainer =  document.getElementById("trending-top")
+let trendingElem =  document.getElementById(`categories-trending`);
+let arrowLeft = document.getElementById("btn-left")
+let arrowRigth = document.getElementById("btn-rigth")
 
 //funcion para agregar las categorias
+// async function trendingCategories(){
+//     const resT = await fetch(trendingPath)
+//     const infoT = await resT.json();
+//     console.log(infoT);
+//     return infoT; 
+// }
+// let infoT = trendingCategories();
+// infoT.then(infoT => {
+    
+//     for(i=0; i>=5; i++){
+//         let p = document.createElement("p");
+//         p.setAttribute("class", "categories-trending");
+//         p.textContent = infoT.data.data[i];
+//         trendingElem.appendChild(p)
+        
+//     }
+// }).catch(err =>{
+//     console.log(err);
+// })
 
+//funcion para mostrar los trending
+function trendingPrueba(off){
+    async function trending(){
+        const res = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=${limite}&offset=${off}`)
+        const info = await res.json();
+        return info
+    }
+    let info = trending();
+    info.then(info => {
+        for(i=0; i < info.data.length; i++){
+            
+    
+            let containerGif = document.createElement("div");
+            containerGif.setAttribute("class", "gifs");
+            let imgGif = document.createElement("img");
+            imgGif.setAttribute("src",info.data[i].images.fixed_width.url);
+            imgGif.setAttribute("class","gifs");
+            let pUser = document.createElement("p")
+            let pTitle = document.createElement("p");
+            pUser.textContent = info.data[i].username;
+            pTitle.textContent= info.data[i].title;
+            
+            
+            containerGif.appendChild(imgGif);
+            trendigContainer.appendChild(containerGif);
 
+            imgGif.addEventListener("mouseover", function(){
+                let hoverDiv = document.createElement("div");
+                let containerIcons = document.createElement("div");
+                let imgFav = document.createElement("img");
+                let imgMax = document.createElement("img");
+                let imgDown = document.createElement("img");
+                let pContainer = document.createElement("div");
+                
+
+                imgFav.setAttribute("src", "../assets/icon-fav.svg");
+                imgFav.setAttribute("class", "bntMin", "id", "btn1");
+                imgDown.setAttribute("src", "../assets/icon-download.svg")
+                imgMax.setAttribute("src", "../assets/icon-max-normal.svg");
+                imgMax.setAttribute("class", "bntMin", "id", "btn2");
+                imgDown.setAttribute("class", "bntMin", "id", "btn3");
+                containerIcons.setAttribute("class","iconsContent")
+                pContainer.setAttribute("class", "text-pJson");
+                hoverDiv.setAttribute("class","hoverGif")
+            
+
+                containerIcons.appendChild(imgFav);
+                containerIcons.appendChild(imgMax);
+                containerIcons.appendChild(imgDown);
+                pContainer.appendChild(pUser);
+                pContainer.appendChild(pTitle)
+                hoverDiv.appendChild(containerIcons);
+                hoverDiv.appendChild(pContainer);
+                containerGif.appendChild(hoverDiv);
+                console.log(pUser);
+            })
+
+            
+
+        }
+    }).catch(err => {
+        console.log(err);
+    })
+
+}
+trendingPrueba();
+
+//pasar gifs
+const nextGif =()=>{
+    trendigContainer.scrollLeft+=400;
+    
+}
+
+const backGif = () =>{
+    trendigContainer.scrollLeft-=400;
+  
+}
+arrowRigth.addEventListener("click",nextGif);
+arrowLeft.addEventListener("click",backGif)
+
+//muestra reactions
 fetch(trendingPath).then(function(res){
     return res.json();
 }).then(function(json) {
     
-    const trendingElem =  document.getElementById(`categories-trending`);
+    
     let trendingHtml = '';
 
     let count = 0;
@@ -27,106 +132,31 @@ fetch(trendingPath).then(function(res){
   //  console.log(err.message);
 });
 
-//funcion de trending 
-
-
-
-fetch(topTrending).then(function(res){ 
-    return res.json();
-}).then(function(json){
+// //funcion de trending 
+// fetch(topTrending).then(function(res){ 
+//     return res.json();
+// }).then(function(json){
     
-    const topElement= document.getElementById(`trending-top`);
-    let trendingHtml = '';
+//     const topElement= document.getElementById(`trending-top`);
+//     let trendingHtml = '';
     
-    json.data.forEach(function(obj){
-       // console.log(json.data);
-        const url = obj.images.fixed_width.url
-        const alt = obj.images.title
+//     json.data.forEach(function(obj){
+//        // console.log(json.data);
+//         const url = obj.images.fixed_width.url
+//         const alt = obj.images.title
 
-            trendingHtml+=`<img 
-            class="img-trending"
-            src="${url}"
-            alt="${alt}">`
-           // console.log(trendingHtml);
+//             trendingHtml+=`<img 
+//             class="img-trending"
+//             src="${url}"
+//             alt="${alt}">`
+//            // console.log(trendingHtml);
         
-    })
-    topElement.innerHTML= trendingHtml;
-    //console.log(topElement);
-}).catch(function(err){
-    console.log(err.message);
-});
+//     })
+//     topElement.innerHTML= trendingHtml;
+//     //console.log(topElement);
+// }).catch(function(err){
+//     console.log(err.message);
+// });
 
-// let createCardOfGif = (gif, parent) => {
-//     let card = document.createElement("div");
-//     let imgContainer = document.createElement("div");
-//     let img = document.createElement("img");
-//     let backgroundHover = document.createElement("div");
-//     let actionBtnList = document.createElement("ul");
-//     let imgClases = ["like", "download", "maximize"];
-//     let aClases = ["aLike", "aDownload", "aMaximize"];
-//     let textContainer = document.createElement("div");
-//     let userName = document.createElement("h6");
-//     let GifTitle = document.createElement("h4");
-
-//     imgContainer.className = "imgContainer";
-//     card.className = "card";
-//     backgroundHover.className = "cardBackground";
-//     textContainer.className = "cardTextContainer";
-//     userName.className = "userName";
-//     GifTitle.className = "gifTitle";
-
-//     img.src = gif.images.downsized.url;
-//     img.alt = "not found";
-
-//     parent.appendChild(card);
-//     card.appendChild(imgContainer);
-//     appendChildren(imgContainer, [img, backgroundHover]);
-//     backgroundHover.appendChild(actionBtnList);
-//     GifTitle.textContent = gif.title;
-//     console.log(gif.title);
-//     userName.textContent = gif.username;
-//     console.log(gif.username);
-
-//     for (let i = 0; i < imgClases.length; i++) {
-//       let element = document.createElement("li");
-//       let a = document.createElement("a");
-//       a.className = aClases[i];
-//       let btnImg = document.createElement("img");
-//       btnImg.className = imgClases[i];
-//       actionBtnList.appendChild(element);
-//       element.appendChild(a);
-//       if (aClases[i] == "aMaximize") {
-//         a.addEventListener("click", maximize);
-//       }
-//       a.appendChild(btnImg);
-//     }
-//     backgroundHover.appendChild(textContainer);
-//     appendChildren(textContainer, [userName, GifTitle]);
-//   };
-
-
-//   let maximize = (gif) => {
-//     let body = document.getElementsByTagName("body")[0];
-//     let modal = document.createElement("div");
-//     modal.className = "modal";
-
-//     let modalContainer = document.createElement("div");
-//     modalContainer.id = "modalContainer";
-
-//     let img = document.createElement("img");
-//     img.src = gif.images.downsized.url;
-
-//     let arrowLeft = document.createElement("button");
-//     let arrowRight = document.createElement("button");
-//     let closeBtn = document.createElement("button");
-
-//     arrowLeft.className = "arrowLeft";
-//     arrowRight.className = "arrowRight";
-//     closeBtn.className = "closeBtn";
-//     console.log("modal");
-
-//     body.appendChild(modal);
-//     modal.appendChild(modalContainer);
-//   };
 
 
